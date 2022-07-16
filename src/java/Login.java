@@ -47,12 +47,12 @@ public class Login extends HttpServlet {
 
                 } else {
 
-                    response.sendRedirect("index.html");
+                    response.sendRedirect("login.html");
 
                 }
 
             }else{
-                response.sendRedirect("index.html");
+                response.sendRedirect("login.html");
             }
         }
         catch(Exception e2){
