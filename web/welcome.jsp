@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/product.css">
     
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -50,6 +51,7 @@
             if(session.getAttribute("uname")==null){
                 response.sendRedirect("login.html");
             }
+            
         %>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -209,162 +211,119 @@
       <!--<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Our Popular Destinations</h1>-->
         <!--Item list-->
         <section class="section-products">
-          <div class="container">
-              <div class="row justify-content-center text-center">
-                  <div class="col-md-8 col-lg-6">
-                      <div class="header">
-                          
-                          <h2>Featured Products</h2>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-1" class="single-product">
-                          <div class="part-1">
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">White maxi dress</h3>
-                              <h4 class="product-old-price">3000</h4>
-                              <h4 class="product-price">2500</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-2" class="single-product">
-                          <div class="part-1">
-                              <span class="discount">15% off</span>
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">Green Floral Dress</h3>
-                              <h4 class="product-price">2000</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-3" class="single-product">
-                          <div class="part-1">
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">Blue Salwar Suit</h3>
-                              <h4 class="product-old-price">1200</h4>
-                              <h4 class="product-price">900</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-4" class="single-product">
-                          <div class="part-1">
-                              <span class="new">new</span>
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">White Salwar Suit</h3>
-                              <h4 class="product-price">2500</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-1" class="single-product">
-                          <div class="part-1">
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title"></h3>White Maxi Dress
-                              <h4 class="product-old-price">3000</h4>
-                              <h4 class="product-price">2500</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-2" class="single-product">
-                          <div class="part-1">
-                              <span class="discount">15% off</span>
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">Blue Salwar Suit</h3>
-                              <h4 class="product-price">2000</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-3" class="single-product">
-                          <div class="part-1">
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">Blue Salwar Suit</h3>
-                              <h4 class="product-old-price">1200</h4>
-                              <h4 class="product-price">900</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Single Product -->
-                  <div class="col-md-6 col-lg-4 col-xl-3">
-                      <div id="product-4" class="single-product">
-                          <div class="part-1">
-                              <span class="new">new</span>
-                              <ul>
-                                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-plus"></i></a></li>
-                                  <li><a href="#"><i class="fas fa-expand"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="part-2">
-                              <h3 class="product-title">White Salwar Suit</h3>
-                              <h4 class="product-price">2500</h4>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+            <div class="product-container">
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
           </div>
+          <div class="card-desc">
+            <h3>Product Name</h3>
+            <%!
+                  String img1 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
+                  String p_id1 = "T001";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id1+"&img="+img1);%>">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-desc">
+            <h3>Product Name</h3>
+            <%!
+                  String img2 = "";
+                  String p_id2 = "T002";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id2+"&img="+img2);%>">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-desc">
+            <h3>Product Name</h3>
+            <%!
+                  String img3 = "";
+                  String p_id3 = "T003";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id3+"&img="+img3);%>">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-desc">
+            <h3>Product Name</h3>
+            <%!
+                  String img4 = "";
+                  String p_id4 = "T004";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id4+"&img="+img4);%>">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-desc">
+            <h3>Product Name</h3>
+            <%!
+                  String img5 = "";
+                  String p_id5 = "T005";
+             %>
+             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id5+"&img="+img5);%>">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="container card-container">
+        <div class="product-card">
+          <div class="card-img">
+            <img
+              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              alt=""
+            />
+          </div>
+          <!-- <div class="card-desc-container"> -->
+            <div class="card-desc">
+              <h3>Product Name</h3>
+              <%!
+                  String img6 = "";
+                  String p_id6 = "T006";
+              %>
+              <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id6+"&img="+img6);%>">Buy Now</a>
+
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      </div>
       </section>
 
 
@@ -372,8 +331,8 @@
           <!--Offer-->
           <div class="container mydiv">
             <div class="row">
-                <div class="col-md-4">
-                    <!-- bbb_deals -->
+<!--                <div class="col-md-4">
+                     bbb_deals 
                     <div class="bbb_deals">
                         <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>4</span></div>
                         <div class="bbb_deals_title">Offer ends in 2 days</div>
@@ -400,9 +359,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- bbb_deals -->
+                </div>-->
+<!--                <div class="col-md-4">
+                     bbb_deals 
                     <div class="bbb_deals">
                         <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>2</span></div>
                         <div class="bbb_deals_title">Offer ends in 1 day</div>
@@ -431,7 +390,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <!-- bbb_deals -->
+                     bbb_deals 
                     <div class="bbb_deals">
                         <div class="ribbon ribbon-top-right"><span><small class="cross">x </small>3</span></div>
                         <div class="bbb_deals_title">Offer ends in 2 days</div>
@@ -455,12 +414,12 @@
                                         <div class="available_bar"><span style="width:17%"></span></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            </div>-->
+                        <!--</div>-->
+<!--                    </div>
+                </div>-->
+<!--            </div>
+        </div>-->
     <!--Offer end-->
     
   
