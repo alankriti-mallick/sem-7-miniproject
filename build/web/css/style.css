@@ -375,7 +375,7 @@ div {
  
  .navbar .dropdown-menu {
    border:none;
-   background-color:#0060c8!important;
+   background-color:rgba(0,0,0,0.8)!important;
  }
  
  /* breakpoint and up - mega dropdown styles */
