@@ -1,3 +1,10 @@
+<%-- 
+    Document   : profile
+    Created on : 19-Jul-2022, 8:22:27 pm
+    Author     : dipte
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html5>
 <html>
   <head>
@@ -72,6 +79,19 @@
     <!--carousel links-->
   </head>
   <body>
+      <%
+            if(session.getAttribute("uname")==null){
+                response.sendRedirect("login.html");
+            }
+            
+            String uname = (String)session.getAttribute("uname");
+            int age = (int)session.getAttribute("age");
+            String state = (String)session.getAttribute("state");
+            String city = (String)session.getAttribute("city");
+            String pin = (String)session.getAttribute("pin");
+            String phno = (String)session.getAttribute("phno");
+            String email = (String)session.getAttribute("email");
+       %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Shopping Delight</a>
       <button
@@ -114,19 +134,19 @@
                     <span class="text-uppercase text-white">Category</span>
                     <ul class="nav flex-column">
                       <li class="nav-item">
-                        <a class="nav-link" href="product.html">Men</a>
+                        <a class="nav-link" href="men.jsp">Men</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="product.html">Women</a>
+                        <a class="nav-link" href="women.jsp">Women</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="product.html">Kids</a>
+                        <a class="nav-link" href="kids.jsp">Kids</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="product.html">Electronics</a>
+                        <a class="nav-link" href="electronics.jsp">Electronics</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="product.html">Furniture</a>
+                        <a class="nav-link" href="furniture.jsp">Furniture</a>
                       </li>
                     </ul>
                   </div>
@@ -177,35 +197,31 @@
         <ul>
           <li>
             <strong>Username:</strong>
-            <p>alan</p>
-          </li>
-          <li>
-            <strong>Password:</strong>
-            <p>alan</p>
+            <p><% out.print(uname); %></p>
           </li>
           <li>
             <strong>Age:</strong>
-            <p>alan</p>
+            <p><% out.print(age); %></p>
           </li>
           <li>
             <strong>State:</strong>
-            <p>alan</p>
+            <p><% out.print(state); %></p>
           </li>
           <li>
             <strong>City:</strong>
-            <p>alan</p>
+            <p><% out.print(city); %></p>
           </li>
           <li>
             <strong>PIN:</strong>
-            <p>alan</p>
+            <p><% out.print(pin); %></p>
           </li>
           <li>
             <strong>Phone No:</strong>
-            <p>alan</p>
+            <p><% out.print(phno); %></p>
           </li>
           <li>
             <strong>Email:</strong>
-            <p>alan</p>
+            <p><% out.print(email); %></p>
           </li>
         </ul>
       </div>

@@ -1,3 +1,11 @@
+<%-- 
+    Document   : adminview
+    Created on : 19-Jul-2022, 8:35:32 pm
+    Author     : dipte
+--%>
+
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html5>
 <html>
   <head>
@@ -22,6 +30,7 @@
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/prod.css" />
+    <link rel="stylesheet" href="css/userList.css" />
 
     <link
       href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -71,6 +80,13 @@
     <!--carousel links-->
   </head>
   <body>
+      
+    <%
+           ArrayList<Integer> idlist = (ArrayList<Integer>)session.getAttribute("idlist");
+           ArrayList<String> namelist = (ArrayList<String>)session.getAttribute("namelist");
+           ArrayList<String> pricelist = (ArrayList<String>)session.getAttribute("pricelist");
+           ArrayList<String> timelist = (ArrayList<String>)session.getAttribute("timelist");
+    %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Shopping Delight</a>
       <button
@@ -90,51 +106,6 @@
           <!-- <li class="nav-item">
           <a class="nav-link active" href="#">About Us</a>
         </li> -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link active dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Category
-            </a>
-            <div
-              class="dropdown-menu"
-              aria-labelledby="navbarDropdown"
-              style="background-color: rgba(0, 0, 0, 0); width: 30%"
-            >
-              <div class="container" style="background-color: rgba(0, 0, 0, 0)">
-                <div class="">
-                  <div class="col-md-6">
-                    <span class="text-uppercase text-white">Category</span>
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Men</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Women</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Kids</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Electronics</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Furniture</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!--  /.container  -->
-            </div>
-          </li>
-
           <li class="nav-item">
             <form action="Logout" method="post">
               <input
@@ -147,14 +118,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active">Welcome ${uname}</a>
+            <a class="nav-link active">Welcome admin</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="#"
-              ><i class="fas fa-shopping-cart"></i
-            ></a>
-          </li>
         </ul>
         <!-- <form class="form-inline my-2 my-lg-0">
           <input
@@ -170,14 +136,29 @@
       </div>
     </nav>
 
-    <div class="wrapper" style="height: 500px">
-      <div class="product-img">
-        <img
-          src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
-          height="420"
-          width="327"
-        />
-      </div>
+    <div class="user-list">
+      <ul>
+        <li>
+          <p>USER ID</p>
+          <p>NAME</p>
+          <p>PRICE</p>
+          <p>DATE</p>
+        </li>
+         <%          
+           int n = namelist.size();
+           
+           for(int i=0;i<n;i++){
+         %>
+        <li>
+          <p><% out.println(idlist.get(i));%></p>
+          <p><% out.println(namelist.get(i));%></p>
+          <p><% out.println(pricelist.get(i));%></p>
+          <p><% out.println(timelist.get(i));%></p>
+        </li>
+        <%
+            } 
+        %>
+      </ul>
     </div>
 
     <!-- Footer-->

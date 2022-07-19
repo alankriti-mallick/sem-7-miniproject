@@ -3,7 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
-<html>
+<html lang="en">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
-        <title>Log-In</title>
+        <title>Admin-Login</title>
 
         <style>
             .x {
@@ -49,9 +49,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
                         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
-                            <form style="width: 23rem;" action="Login" method="Post">
+                            <form name="myForm" style="width: 23rem;" action="" method="Post">
 
-                                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+                                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Admin Log-in</h3>
 
                                 <div class="form-outline mb-4">
                                     <input type="text" id="form2Example18" class="form-control form-control-lg" name="uname"/>
@@ -64,11 +64,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 </div>
 
                                 <div class="pt-1 mb-4">
-                                    <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                                    <button class="btn btn-info btn-lg btn-block" type="submit" onclick="returnValidateAdmin()">Login</button>
                                 </div>
-
-
-                                <p>Don't have an account? <a href="register.html" class="link-info">Register here</a></p>
 
                             </form>
 
@@ -82,5 +79,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div>
             </div>
         </section>
+        <script src="script/adminlogin.js"></script>
     </body>
 </html>

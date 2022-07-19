@@ -28,6 +28,7 @@ public class Product extends HttpServlet {
         String price = null;
         String discount=null;
         String productcategory=null;
+        String details = null;
         ResultSet rs1 = null;
         
         String p_id = request.getParameter("p_id");
@@ -55,12 +56,14 @@ public class Product extends HttpServlet {
                 price = rs1.getString("price");
                 discount = rs1.getString("discount");
                 productcategory = rs1.getString("productcategory");
+                details = rs1.getString("details");
                     
                 HttpSession session = request.getSession();
                 session.setAttribute("name",name);
                 session.setAttribute("price",price);
                 session.setAttribute("discount", discount);
                 session.setAttribute("productcategory",productcategory);
+                session.setAttribute("details",details);
                 session.setAttribute("img", img);
                 session.setAttribute("p_id",p_id);
                 response.sendRedirect("product.jsp?p_id="+p_id);

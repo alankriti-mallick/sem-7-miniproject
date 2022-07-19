@@ -41,8 +41,21 @@ public class Login extends HttpServlet {
 
             if(rs.next()) {
                 if (rs.getString(1).equals(uname) && rs.getString(2).equals(pass)) {
+                    int age = rs.getInt("age");
+                    String state = rs.getString("state");
+                    String city = rs.getString("city");
+                    String pin = rs.getString("pin");
+                    String phno = rs.getString("phno");
+                    String email = rs.getString("email");
+                    
                     HttpSession session = request.getSession();
                     session.setAttribute("uname",uname);
+                    session.setAttribute("age",age);
+                    session.setAttribute("state",state);
+                    session.setAttribute("city",city);
+                    session.setAttribute("pin",pin);
+                    session.setAttribute("phno",phno);
+                    session.setAttribute("email",email);
                     response.sendRedirect("welcome.jsp");
 
                 } else {

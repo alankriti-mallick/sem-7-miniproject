@@ -1,3 +1,10 @@
+<%-- 
+    Document   : men
+    Created on : 19-Jul-2022, 7:43:04 pm
+    Author     : dipte
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html5>
 <html>
     <head>
@@ -40,7 +47,13 @@
 
     </head>
     <body>
-        
+         <%
+            if(session.getAttribute("uname")==null){
+                response.sendRedirect("login.html");
+            }
+            String uname = (String)session.getAttribute("uname");
+            
+        %>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Shopping Delight</a>
@@ -66,19 +79,19 @@
                   <span class="text-uppercase text-white">Category</span>
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Men</a>
+                        <a class="nav-link" href="men.jsp">Men</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Women</a>
+                        <a class="nav-link" href="women.jsp">Women</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Kids</a>
+                        <a class="nav-link" href="kids.jsp">Kids</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Electronics</a>
+                        <a class="nav-link" href="electronics.jsp">Electronics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Furniture</a>
+                        <a class="nav-link" href="furniture.jsp">Furniture</a>
                     </li>
                   </ul>
                 </div>
@@ -104,7 +117,7 @@
         </li>
   
         <li class="nav-item">
-          <a class="nav-link active" href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a class="nav-link active" href="<% out.print("cartdata.jsp?uname="+uname);%>"><i class="fas fa-shopping-cart"></i></a>
         </li>
       </ul>
     </div>
@@ -135,7 +148,11 @@
           </div>
           <div class="card-desc">
             <h3>Product Name</h3>
-            <a href="">Buy Now</a>
+            <%!
+                  String img1 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
+                  String p_id1 = "T001";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id1+"&img="+img1);%>">Buy Now</a>
           </div>
         </div>
       </div>
@@ -149,7 +166,11 @@
           </div>
           <div class="card-desc">
             <h3>Product Name</h3>
-            <a href="">Buy Now</a>
+            <%!
+                  String img2 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
+                  String p_id2 = "T002";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id2+"&img="+img2);%>">Buy Now</a>
           </div>
         </div>
       </div>
@@ -163,8 +184,11 @@
           </div>
           <div class="card-desc">
             <h3>Product Name</h3>
-            
-            <a href="">Buy Now</a>
+            <%!
+                  String img3 = "";
+                  String p_id3 = "T003";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id3+"&img="+img3);%>">Buy Now</a>
           </div>
         </div>
       </div>
@@ -178,8 +202,11 @@
           </div>
           <div class="card-desc">
             <h3>Product Name</h3>
-            
-            <a href="">Buy Now</a>
+            <%!
+                  String img4 = "";
+                  String p_id4 = "T004";
+            %>
+            <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id4+"&img="+img4);%>">Buy Now</a>
           </div>
         </div>
       </div>
@@ -193,8 +220,11 @@
           </div>
           <div class="card-desc">
             <h3>Product Name</h3>
-            
-             <a href="">Buy Now</a>
+            <%!
+                  String img5 = "";
+                  String p_id5 = "T005";
+             %>
+             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id5+"&img="+img5);%>">Buy Now</a>
           </div>
         </div>
       </div>
@@ -209,8 +239,11 @@
           <!-- <div class="card-desc-container"> -->
             <div class="card-desc">
               <h3>Product Name</h3>
-              
-              <a href="">Buy Now</a>
+              <%!
+                  String img6 = "";
+                  String p_id6 = "T006";
+              %>
+              <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id6+"&img="+img6);%>">Buy Now</a>
 
             </div>
           <!-- </div> -->
@@ -218,36 +251,6 @@
       </div>
       </div>
       </section>
-
-
-     <!-- Footer-->
-     <footer class="bg-dark text-center text-white">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-    
-          <!-- Twitter -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-twitter"></i
-          ></a>
-    
-          <!-- Google -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-google"></i
-          ></a>
-    
-          <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-instagram"></i
-          ></a>
-    
-         
-        </section>
         <!-- Section: Social media -->
       </div>
       <!-- Grid container -->

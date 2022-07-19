@@ -1,3 +1,12 @@
+create table tblproduct(p_id varchar2(50) not null,name varchar2(50),price varchar2(50),discount varchar2(50),
+productcategory varchar2(50),details varchar2(200));
+
+insert into tblproduct values('T001','Elnf Gown','123','18','women','Best quality Italian Gown.');
+insert into tblproduct values('T002','Ozone T-shirt','28','10','men','Best quality Ozone t-shirt.Provides super comfort.');
+insert into tblproduct values('T003','Lace-Up Sneakers','30','8','men','Men Colourblocked Color Changing Lace-Up Sneakers.');
+insert into tblproduct values('T004','Fit Dark Jeans','34','6','men','A must-have in your casual wardrobe, This pair of jeans are designed with a button fly closure, insert and patch pockets.');
+insert into tblproduct values('T005','Full Sleeves Kurta','34','6','men','A must-have in your casual wardrobe, This pair of jeans are designed with a button fly closure, insert and patch pockets.');
+
 create table cartdata(c_id number not null,uname varchar2(50),name varchar2(50),price varchar2(50),productcategory varchar2(50));
 
 create sequence data2_id_seq;

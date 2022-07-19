@@ -375,7 +375,7 @@ div {
  
  .navbar .dropdown-menu {
    border:none;
-   background-color:rgba(0,0,0,0.8)!important;
+   background-color:#0060c8!important;
  }
  
  /* breakpoint and up - mega dropdown styles */
@@ -397,7 +397,7 @@ div {
  .navbar .dropdown {position:static;}
  
  .navbar .dropdown-menu {
-   width:100%;
+   width:50%;
    left:0;
    right:0;
  /*  height of nav-item  */
@@ -422,8 +422,8 @@ div {
  }
    
    .navbar .dropdown-menu {
-     border: 1px solid rgba(0,0,0,.15);
-     background-color: #fff;
+        border:none;
+        background-color: rgba(0, 0, 0, 0.9)!important;
    }
  
  }

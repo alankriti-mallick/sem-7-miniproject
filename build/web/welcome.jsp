@@ -53,6 +53,7 @@
                 response.sendRedirect("login.html");
             }
             
+            String uname = (String)session.getAttribute("uname");
         %>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -63,74 +64,37 @@
   
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">About Us</a>
-        </li>
-        <li class="nav-item dropdown">
+         <li class="nav-item dropdown">
           <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Category
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgba(0,0,0,0); width: 30%;">
   
             
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
+            <div class="container" style="background-color: rgba(0,0,0,0);">
+              <div class="">
+                <div class="col-md-6">
                   <span class="text-uppercase text-white">Category</span>
                   <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Men</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Shirts</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Jeans</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Belt</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">T-Shirts</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Jacket</a>
-                  </li>
-                </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="men.jsp">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women.jsp">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kids.jsp">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="electronics.jsp">Electronics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="furniture.jsp">Furniture</a>
+                    </li>
+                  </ul>
                 </div>
-                <!-- /.col-md-4  -->
-                <div class="col-md-4">
-                  <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Women</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Dress</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Kurtis</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Lehenga</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Saree</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Jeans</a>
-                  </li>
-                </ul>
-                </div>
-                <!-- /.col-md-4  -->
-                <div class="col-md-4">
-        
-                  <a href="">
-                    <img src="https://g3fashion.com/blog/wp-content/uploads/2020/07/927528e27333b309d71cbf9da1ea0e2f-e1597740173821.jpg" alt="" class="img-fluid">
-                  </a>
-                  <p class="text-white">Short image call to action</p>
-                  
-                </div>
-                <!-- /.col-md-4  -->
+                
+                
               </div>
             </div>
             <!--  /.container  -->
@@ -147,17 +111,14 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active">Welcome ${uname}</a>
+          <a class="nav-link active" href="profile.jsp">${uname}</a>
         </li>
   
         <li class="nav-item">
-          <a class="nav-link active" href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a class="nav-link active" href="<% out.print("cartdata.jsp?uname="+uname);%>"><i class="fas fa-shopping-cart"></i></a>
         </li>
+        
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   
   
@@ -222,7 +183,7 @@
             />
           </div>
           <div class="card-desc">
-            <h3>Product Name</h3>
+            <h3>Elnf Gown</h3>
             <%!
                   String img1 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
                   String p_id1 = "T001";
@@ -235,14 +196,14 @@
         <div class="product-card">
           <div class="card-img">
             <img
-              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              src="https://4.imimg.com/data4/AA/HC/MY-26596027/men-s-fancy-t-shirt-500x500.jpg"
               alt=""
-            />
+            >
           </div>
           <div class="card-desc">
-            <h3>Product Name</h3>
+            <h3>Ozone T-shirt</h3>
             <%!
-                  String img2 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
+                  String img2 ="https://4.imimg.com/data4/AA/HC/MY-26596027/men-s-fancy-t-shirt-500x500.jpg";
                   String p_id2 = "T002";
             %>
             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id2+"&img="+img2);%>">Buy Now</a>
@@ -253,14 +214,14 @@
         <div class="product-card">
           <div class="card-img">
             <img
-              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              src="https://th.bing.com/th/id/OIP.JK8gvXw7Xjky0-CQh8LOQAHaJQ?w=150&h=188&c=7&r=0&o=5&dpr=1.25&pid=1.7"
               alt=""
             />
           </div>
           <div class="card-desc">
-            <h3>Product Name</h3>
+            <h3>Lace-Up Sneakers</h3>
             <%!
-                  String img3 = "";
+                  String img3 = "https://th.bing.com/th/id/OIP.JK8gvXw7Xjky0-CQh8LOQAHaJQ?w=150&h=188&c=7&r=0&o=5&dpr=1.25&pid=1.7";
                   String p_id3 = "T003";
             %>
             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id3+"&img="+img3);%>">Buy Now</a>
@@ -271,14 +232,14 @@
         <div class="product-card">
           <div class="card-img">
             <img
-              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              src="https://www.boggi.com/dw/image/v2/BBBS_PRD/on/demandware.static/-/Sites-BoggiCatalog/default/dw8c2b5166/images/hi-res/BO20P063501_1.jpg?sw=1120"
               alt=""
             />
           </div>
           <div class="card-desc">
-            <h3>Product Name</h3>
+            <h3>Fit Dark Jeans</h3>
             <%!
-                  String img4 = "";
+                  String img4 = "https://www.boggi.com/dw/image/v2/BBBS_PRD/on/demandware.static/-/Sites-BoggiCatalog/default/dw8c2b5166/images/hi-res/BO20P063501_1.jpg?sw=1120";
                   String p_id4 = "T004";
             %>
             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id4+"&img="+img4);%>">Buy Now</a>
@@ -289,14 +250,14 @@
         <div class="product-card">
           <div class="card-img">
             <img
-              src="https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg"
+              src="https://th.bing.com/th/id/OIP.wlyiZA2hLnm3h9ZsjD31dwHaJ4?w=182&h=243&c=7&r=0&o=5&dpr=1.25&pid=1.7"
               alt=""
             />
           </div>
           <div class="card-desc">
-            <h3>Product Name</h3>
+            <h3>Full Sleeves Kurta</h3>
             <%!
-                  String img5 = "";
+                  String img5 = "https://th.bing.com/th/id/OIP.wlyiZA2hLnm3h9ZsjD31dwHaJ4?w=182&h=243&c=7&r=0&o=5&dpr=1.25&pid=1.7";
                   String p_id5 = "T005";
              %>
              <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id5+"&img="+img5);%>">Buy Now</a>

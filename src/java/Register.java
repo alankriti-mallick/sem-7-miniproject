@@ -57,6 +57,12 @@ public class Register extends HttpServlet {
             if(i>0){
                 HttpSession session = request.getSession();
                 session.setAttribute("uname",n);
+                session.setAttribute("age",e);
+                session.setAttribute("state",c);
+                session.setAttribute("city",a);
+                session.setAttribute("pin",b);
+                session.setAttribute("phno",d);
+                session.setAttribute("email",h);
                 response.sendRedirect("welcome.jsp");
                 System.out.println("You are successfully registered...");
             }

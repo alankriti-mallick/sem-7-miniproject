@@ -22,6 +22,6 @@ public class Logout extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.removeAttribute("uname");
-        response.sendRedirect("welcome.jsp");
+        response.sendRedirect("index.jsp");
     }
 }
