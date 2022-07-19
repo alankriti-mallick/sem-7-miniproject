@@ -28,6 +28,14 @@
         <servlet-name>DeleteItem</servlet-name>
         <servlet-class>DeleteItem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SaveItem</servlet-name>
+        <servlet-class>SaveItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>Delete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>DeleteItem</servlet-name>
         <url-pattern>/DeleteItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveItem</servlet-name>
+        <url-pattern>/SaveItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/Delete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

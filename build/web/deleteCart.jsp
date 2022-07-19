@@ -19,7 +19,7 @@
                 response.sendRedirect("login.html");
             }
             
-            RequestDispatcher rq = request.getRequestDispatcher("DeleteItem");
+            RequestDispatcher rq = request.getRequestDispatcher("SaveItem");
             rq.forward(request, response);
             
         %>

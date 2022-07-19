@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/welcome.jsp</file>
-            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/productdesc.jsp</file>
+            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/src/java/Delete.java</file>
+            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/src/java/SaveItem.java</file>
             <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/cartdata.jsp</file>
-            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/product.jsp</file>
-            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/addCart.jsp</file>
             <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/deleteCart.jsp</file>
-            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/src/java/Product.java</file>
+            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/delete.jsp</file>
+            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/deleteproduct.jsp</file>
+            <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/src/java/DeleteItem.java</file>
             <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/src/java/Cart.java</file>
             <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/cart.jsp</file>
             <file>file:/C:/Users/dipte/Documents/NetBeansProjects/ShoppingWebsite/web/css/prod.css</file>

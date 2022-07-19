@@ -23,6 +23,7 @@
             String name = (String)session.getAttribute("name");
             String price =(String)session.getAttribute("price");
             String productcategory =(String)session.getAttribute("productcategory");
+            int c_id = 0;
             
             
         try{
@@ -31,12 +32,13 @@
             
             System.out.println("Connection created");  
                  
-            PreparedStatement ps = con.prepareStatement("insert into cartdata values(?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into cartdata values(?,?,?,?,?)");
 
-            ps.setString(1,uname);
-            ps.setString(2,name);
-            ps.setString(3,price);
-            ps.setString(4,productcategory);
+            ps.setInt(1,c_id);
+            ps.setString(2,uname);
+            ps.setString(3,name);
+            ps.setString(4,price);
+            ps.setString(5,productcategory);
             
             int i=ps.executeUpdate();
             if(i>0){

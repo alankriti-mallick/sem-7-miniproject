@@ -22,6 +22,7 @@ public class Cart extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ArrayList<Integer> idlist = new ArrayList<>();
         ArrayList<String> namelist = new ArrayList<>();
         ArrayList<String> pricelist = new ArrayList<>();
         ArrayList<String> productcategorylist = new ArrayList<>();
@@ -49,9 +50,12 @@ public class Cart extends HttpServlet {
             int i=0;
             while(rs1.next()&&i<n) {
                 System.out.println(rs1.getRow());
+                int c_id = rs1.getInt("c_id");
                 String name = rs1.getString("name");
                 String price = rs1.getString("price");
                 String productcategory = rs1.getString("productcategory");
+                
+                idlist.add(c_id);
                 namelist.add(name);
                 pricelist.add(price);
                 productcategorylist.add(productcategory);
@@ -60,6 +64,7 @@ public class Cart extends HttpServlet {
                     
             }
             HttpSession session = request.getSession();
+            session.setAttribute("idlist",idlist);
             session.setAttribute("namelist",namelist);
             session.setAttribute("pricelist",pricelist);
             session.setAttribute("productcategorylist",productcategorylist);

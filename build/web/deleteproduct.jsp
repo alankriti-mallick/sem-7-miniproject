@@ -1,6 +1,6 @@
 <%-- 
-    Document   : delete
-    Created on : 18-Jul-2022, 11:49:00 pm
+    Document   : deleteproduct
+    Created on : 19-Jul-2022, 11:23:53 am
     Author     : dipte
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Delete Page</title>
+        <title>DeleteProduct Page</title>
     </head>
     <body>
         <%
@@ -17,9 +17,9 @@
                 response.sendRedirect("login.html");
             }
             
-            String uname = (String)session.getAttribute("uname");
-            String totalprice = (String)session.getAttribute("totalprice");
-            response.sendRedirect("deleteCart.jsp?uname="+uname+"&totalprice="+totalprice);
+            RequestDispatcher rq = request.getRequestDispatcher("Delete");
+            rq.forward(request, response);
         %>
+        
     </body>
 </html>

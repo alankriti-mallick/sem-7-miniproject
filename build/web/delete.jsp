@@ -18,7 +18,8 @@
             }
             
             String uname = (String)session.getAttribute("uname");
-            response.sendRedirect("deleteCart.jsp?uname="+uname);
+            String totalprice = (String)session.getAttribute("totalprice");
+            response.sendRedirect("deleteCart.jsp?uname="+uname+"&totalprice="+totalprice);
         %>
     </body>
 </html>
