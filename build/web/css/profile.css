@@ -1,0 +1,38 @@
+.profile-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-box {
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-box h3{
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-box ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.profile-box ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-box ul li p {
+  width: 3em;
+  text-align: right;
+}
