@@ -1,0 +1,25 @@
+create table cartdata(c_id number not null,uname varchar2(50),name varchar2(50),price varchar2(50),productcategory varchar2(50));
+
+create sequence data2_id_seq;
+
+create trigger data2_bi
+before insert on cartdata
+for each row
+begin
+	select data2_id_seq.nextval
+	into:new.c_id
+	from dual;
+end;
+
+
+create table buydata(b_id number not null,uname varchar2(50),totalprice varchar2(50),b_date varchar2(50));
+create sequence data1_id_seq;
+
+create trigger data1_bi
+before insert on buydata
+for each row
+begin
+	select data1_id_seq.nextval
+	into:new.b_id
+	from dual;
+end;
