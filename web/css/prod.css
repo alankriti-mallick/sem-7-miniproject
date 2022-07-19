@@ -105,7 +105,7 @@ body {
     font-size: 34px;
   }
   
-  .product-price-btn button {
+  .product-price-btn .button {
     float: right;
     display: inline-block;
     height: 50px;
@@ -114,6 +114,7 @@ body {
     box-sizing: border-box;
     border: transparent;
     border-radius: 60px;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -125,6 +126,6 @@ body {
     outline: none;
   }
   
-  .product-price-btn button:hover {
+  .product-price-btn .button:hover {
     background-color: #79b0a1;
   }

@@ -4,6 +4,7 @@
     Author     : dipte
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html5>
 <html>
@@ -241,7 +242,7 @@
           <div class="card-desc">
             <h3>Product Name</h3>
             <%!
-                  String img2 = "";
+                  String img2 = "https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?cs=srgb&dl=pexels-yuri-manei-2235071.jpg&fm=jpg";
                   String p_id2 = "T002";
             %>
             <a href="<% out.print("productdesc.jsp?"+"p_id="+p_id2+"&img="+img2);%>">Buy Now</a>

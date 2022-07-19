@@ -23,10 +23,6 @@
             <div class="product-img">
             <%
                 String img = (String)session.getAttribute("img");
-                String name = (String)session.getAttribute("name");
-                String price = (String)session.getAttribute("price");
-                String discount = (String)session.getAttribute("discount");
-                String productcategory = (String)session.getAttribute("productcategory");
             %>
             <img src="<% out.print(img);%>" height="420" width="327">
           </div>
@@ -38,7 +34,9 @@
       </div>
       <div class="product-price-btn">
         <p><span>${price}</span>$</p>
-        <button type="button">buy now</button>
+        <form action="addCart.jsp">
+            <input class="button" type="submit" value="buy now">
+        </form>
       </div>
     </div>
   </div>
